@@ -1,0 +1,28 @@
+
+server:
+  port: 8090
+
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/postgress
+    username: postgres
+    password: soil
+  cloud:
+    compatibility-verifier:
+      enabled: false
+
+#enableCache: true
+
+
+redison-cache:
+  url: redis://127.0.0.1:6379
+
+cache-ttls:
+  booking: 10
+
+
+logging:
+  level:
+    org.springframework.data.r2dbc: DEBUG
+  pattern:
+    level: "[%thread] [%X{correlationId}] %-5level %logger{36} - %msg%n"
