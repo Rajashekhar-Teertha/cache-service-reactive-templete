@@ -18,7 +18,6 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 @Configuration
 @ConfigurationProperties(prefix = "redison-cache")
 @Data
-//@ConditionalOnProperty(name = "enableCache", havingValue = "true")
 public class RedisConfig {
 
     private String url;

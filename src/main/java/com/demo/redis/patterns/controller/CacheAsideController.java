@@ -1,19 +1,19 @@
 package com.demo.redis.patterns.controller;
 
-import com.demo.redis.patterns.service.ProductService;
+import com.demo.redis.patterns.service.CacheAsideService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping("product")
+@RequestMapping("cache")
 @Slf4j
-public class ProductController<K,V> {
+public class CacheAsideController<K,V> {
 
 
     @Autowired
-    private ProductService productService;
+    private CacheAsideService cacheAsideService;
 
     /**
      * @param id
@@ -22,7 +22,7 @@ public class ProductController<K,V> {
     @GetMapping("/cacheGet/{id}")
     public Mono<V> getCache(@PathVariable K id){
         log.info("processing get cache method ... {}", id);
-        return productService.getCache(id);
+        return cacheAsideService.getCache(id);
     }
 
     /**
@@ -32,7 +32,7 @@ public class ProductController<K,V> {
     @PostMapping("/cachePut/{id}")
     public Mono<Void> putCache(@RequestBody V object, @PathVariable("id") K id){
         log.info("processing put Cache method {}",object);
-         return this.productService.putCache(id, object).then();
+         return this.cacheAsideService.putCache(id, object).then();
     }
 
 }

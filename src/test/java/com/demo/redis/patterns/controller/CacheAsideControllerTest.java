@@ -5,10 +5,9 @@ import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import com.demo.redis.patterns.config.RedisConfig;
 //import com.demo.redis.patterns.dto.ProductDto;
 import com.demo.redis.patterns.model.TestCacheModel;
-import com.demo.redis.patterns.service.ProductService;
+import com.demo.redis.patterns.service.CacheAsideService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -19,8 +18,6 @@ import org.redisson.api.RedissonClient;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.data.redis.connection.ReactiveRedisConnectionFactory;
-import org.springframework.data.redis.core.ReactiveHashOperations;
-import org.springframework.data.redis.core.ReactiveRedisOperations;
 import org.springframework.data.redis.core.ReactiveRedisTemplate;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.web.reactive.function.client.ClientResponse;
@@ -37,7 +34,7 @@ import reactor.core.publisher.Mono;
  */
 @SpringBootTest()
 @ExtendWith(SpringExtension.class)
-public class ProductControllerTest {
+public class CacheAsideControllerTest {
 
     @Mock
     private WebClient webClientMock;
@@ -68,7 +65,7 @@ public class ProductControllerTest {
     private Mono<TestCacheModel> postResponseMock;
 
     @Mock
-    private ProductService productService;
+    private CacheAsideService cacheAsideService;
 
     @MockBean
     RedissonClient redisson;
@@ -81,7 +78,7 @@ public class ProductControllerTest {
     ReactiveRedisTemplate<Object,Object> reactiveRedisTemplate;
 
     @InjectMocks
-    private ProductController controllerMock;
+    private CacheAsideController controllerMock;
 
     @SuppressWarnings("unchecked")
     @Test
@@ -93,10 +90,10 @@ public class ProductControllerTest {
         when(requestBodySpecMock.body(any())).thenReturn(requestHeadersSpecMock);
         when(requestHeadersSpecMock.exchange()).thenReturn(Mono.just(clientResponse));
         Mono<Void> void1 = Mockito.mock(Mono.class);
-        when(productService.putCache(any(),any())).thenReturn(void1);
+        when(cacheAsideService.putCache(any(),any())).thenReturn(void1);
         Mono<Void> response = controllerMock.putCache(post,"test1");
         Assertions.assertNotNull(response);
-        verify(productService,Mockito.times(1)).putCache(any(),any());
+        verify(cacheAsideService,Mockito.times(1)).putCache(any(),any());
     }
 
 
@@ -110,11 +107,11 @@ public class ProductControllerTest {
         when(requestHeadersUriSpecMock.uri(anyString())).thenReturn(requestHeadersSpecMock);
         when(requestHeadersSpecMock.retrieve()).thenReturn(responseSpecMock);
         when(responseSpecMock.bodyToMono(TestCacheModel.class)).thenReturn(Mono.just(post));
-        when(productService.getCache(any())).thenReturn(Mono.just(post));
+        when(cacheAsideService.getCache(any())).thenReturn(Mono.just(post));
         Mono<Object> response = controllerMock.getCache("test1");
 
         Assertions.assertNotNull(response);
-        verify(productService,Mockito.times(1)).getCache(any());
+        verify(cacheAsideService,Mockito.times(1)).getCache(any());
     }
 
 

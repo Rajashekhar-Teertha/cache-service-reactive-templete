@@ -1,7 +1,7 @@
 package com.demo.redis.patterns.service;
 
 import com.demo.redis.patterns.model.TestCacheModel;
-import com.demo.redis.patterns.service.impl.ProductServiceImpl;
+import com.demo.redis.patterns.service.impl.CacheAsideAsideServiceImpl;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -23,7 +23,7 @@ import static org.mockito.Mockito.when;
 
 @SpringBootTest()
 @ExtendWith(SpringExtension.class)
-public class ProductServiceImplTest {
+public class CacheAsideServiceImplTest {
 
     @Mock
     ReactiveRedisOperations<String,Object> reactiveRedisTemplateforBooking;
@@ -38,7 +38,7 @@ public class ProductServiceImplTest {
     private ReactiveValueOperations valueOperations;
 
     @InjectMocks
-    private ProductServiceImpl productService;
+    private CacheAsideAsideServiceImpl productService;
 
     @Test
     public void getCacheTest(){

@@ -57,7 +57,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CacheAsideControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cache-service-reactive-templete" />
       <extension name="coverage">
         <pattern>
@@ -66,13 +66,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.demo.redis.patterns.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.demo.redis.patterns.controller.ProductControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="com.demo.redis.patterns.controller.CacheAsideControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CacheAsideControllerTest.test_createPost" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cache-service-reactive-templete" />
       <extension name="coverage">
         <pattern>
@@ -81,24 +81,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.demo.redis.patterns.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.demo.redis.patterns.controller.ProductControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductControllerTest.test_createPost" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cache-service-reactive-templete" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.demo.redis.patterns.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.demo.redis.patterns.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.demo.redis.patterns.controller.ProductControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="com.demo.redis.patterns.controller.CacheAsideControllerTest" />
       <option name="METHOD_NAME" value="test_createPost" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cache-service-reactive-templete" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.demo.redis.patterns.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.demo.redis.patterns.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.demo.redis.patterns.controller.ProductControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -106,8 +106,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.RedisSpringApplication" />
-        <item itemvalue="JUnit.ProductControllerTest" />
-        <item itemvalue="JUnit.ProductControllerTest.test_createPost" />
+        <item itemvalue="JUnit.CacheAsideControllerTest" />
+        <item itemvalue="JUnit.CacheAsideControllerTest.test_createPost" />
         <item itemvalue="JUnit.ProductControllerTest" />
       </list>
     </recent_temporary>
@@ -122,5 +122,16 @@
       <updated>1671547031971</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/demo/redis/patterns/config/RedisConfig.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
