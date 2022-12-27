@@ -9,7 +9,8 @@ import reactor.core.publisher.Mono;
 @RestController
 @RequestMapping("product")
 @Slf4j
-public class ProductController {
+public class ProductController<K,V> {
+
 
     @Autowired
     private ProductService productService;
@@ -19,7 +20,7 @@ public class ProductController {
      * @return object
      */
     @GetMapping("/cacheGet/{id}")
-    public Mono<Object> getCache(@PathVariable String id){
+    public Mono<V> getCache(@PathVariable K id){
         log.info("processing get cache method ... {}", id);
         return productService.getCache(id);
     }
@@ -29,7 +30,7 @@ public class ProductController {
      * @return object
      */
     @PostMapping("/cachePut/{id}")
-    public Mono<Void> putCache(@RequestBody Object object, @PathVariable("id") String id){
+    public Mono<Void> putCache(@RequestBody V object, @PathVariable("id") K id){
         log.info("processing put Cache method {}",object);
          return this.productService.putCache(id, object).then();
     }

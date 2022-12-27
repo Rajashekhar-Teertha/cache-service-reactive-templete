@@ -32,16 +32,31 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/rajashekharteertha/Desktop/cache-1/cache-service-reactive-templete"
+    "last_opened_file_path": "/Users/rajashekharteertha/Desktop/cache-1/cache-service-reactive-templete/src/main/java/com/demo/redis/patterns/service/impl"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/demo/redis/patterns/service/impl" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/demo/redis/patterns/service" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.RedisSpringApplication">
+    <configuration name="RedisSpringApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.demo.redis.patterns.RedisSpringApplication" />
+      <module name="cache-service-reactive-templete" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.demo.redis.patterns.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProductControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cache-service-reactive-templete" />
       <extension name="coverage">
@@ -68,13 +83,31 @@
       <option name="PACKAGE_NAME" value="com.demo.redis.patterns.controller" />
       <option name="MAIN_CLASS_NAME" value="com.demo.redis.patterns.controller.ProductControllerTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductControllerTest.test_createPost" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cache-service-reactive-templete" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.demo.redis.patterns.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.demo.redis.patterns.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.demo.redis.patterns.controller.ProductControllerTest" />
+      <option name="METHOD_NAME" value="test_createPost" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RedisSpringApplication" />
         <item itemvalue="JUnit.ProductControllerTest" />
+        <item itemvalue="JUnit.ProductControllerTest.test_createPost" />
         <item itemvalue="JUnit.ProductControllerTest" />
       </list>
     </recent_temporary>
