@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @Getter
 public class TTLConfig {
-    @Value("${cache-ttls.booking}")
+    @Value("${cache-ttls}")
     private String cacheTTL;
 
 }

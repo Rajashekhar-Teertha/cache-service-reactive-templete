@@ -17,8 +17,7 @@ spring:
 redison-cache:
   url: redis://127.0.0.1:6379
 
-cache-ttls:
-  booking: 10
+cache-ttls: 10
 
 
 logging:
