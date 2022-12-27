@@ -1,0 +1,5 @@
+com/demo/redis/patterns/model/TestCacheModel$TestCacheModelBuilder.class
+com/demo/redis/patterns/model/TestCacheModel.class
+com/demo/redis/patterns/RedisSpringApplicationTests.class
+com/demo/redis/patterns/service/ProductServiceImplTest.class
+com/demo/redis/patterns/controller/ProductControllerTest.class

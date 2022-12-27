@@ -1,0 +1,7 @@
+spring.r2dbc.url=r2dbc:postgresql://localhost:5432/productdb
+spring.r2dbc.username=postgres
+spring.r2dbc.password=root
+cache.enabled=true
+redison-cache.url=redis://127.0.0.1:6379
+cache-ttls.booking=100
+server.port=9898
